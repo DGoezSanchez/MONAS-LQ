@@ -11,4 +11,5 @@ WORKDIR /workspace
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 VOLUME /workspace/sandbox
-CMD ["bash"]
+#CMD ["bash"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
